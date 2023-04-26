@@ -2,18 +2,18 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 func main() {
 	//read output from file
-	prg2, _ := ioutil.ReadFile("prg2.txt")
-	fmt.Printf("Print message: %s/n", prg2)
+	file, _ := os.ReadFile("./file.txt")
+	fmt.Printf("Print message: %s, \n", file)
 
 	//read input from file
 	var name string
 
-	fmt.Print("Enter your name: ")
+	fmt.Print("Enter your name : ")
 	fmt.Scanln(&name)
 
 	var age int

@@ -1,10 +1,14 @@
-all: build 
+all: build copy
 
-build:
-	go build main.go 
-	go build -o prg2.go
-	
+build: main.go
+	go build -o bin/main main.go
+	make copy
 
-run: build
+copy:
+	cp file.txt bin/
+ 
+run:
+	build
+
   
 

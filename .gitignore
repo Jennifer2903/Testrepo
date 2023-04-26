@@ -1,0 +1,8 @@
+# Ignore Folders
+/bin/
+
+
+# Ignore Editor and Program things
+.DS_Store
+.vscode/
+.idea/
