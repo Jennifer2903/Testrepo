@@ -1,14 +1,20 @@
 all: build copy
 
-build: main.go
+
+build: copy
 	go build -o bin/main main.go
 	make copy
 
 copy:
 	cp file.txt bin/
- 
-run:
-	build
+	
+
+update_extensions:
+	for file in *.text; do mv "$$file" "$${file%.text}.txt" ; done 
+
+
+
+clean: all
 
   
 

@@ -7,7 +7,12 @@ import (
 
 func main() {
 	//read output from file
-	file, _ := os.ReadFile("./file.txt")
+	//read output from file
+	file, err := os.ReadFile("./file.txt")
+	if err != nil {
+		// error handling goes here, print it out and exit
+	}
+
 	fmt.Printf("Print message: %s, \n", file)
 
 	//read input from file
