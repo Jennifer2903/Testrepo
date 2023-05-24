@@ -7,7 +7,9 @@ build: copy
 
 copy:
 	cp file.txt bin/
-	
+
+run: build	
+	./main.go
 
 update_extensions:
 	for file in *.text; do mv "$$file" "$${file%.text}.txt" ; done 
